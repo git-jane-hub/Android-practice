@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="최재인"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="16dp"></TextView>
+
+    <Button
+        android:id="@+id/myName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="144dp"
+        android:text="버튼을 클릭해주세요."
+        app:layout_constraintStart_toEndOf="@+id/red"
+        app:layout_constraintTop_toBottomOf="@+id/tv1"></Button>
+
+    <Button
+        android:id="@+id/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="256dp"
+        android:backgroundTint="#ff0000"
+        android:text="red"
+        app:layout_constraintTop_toBottomOf="@+id/myName"
+        tools:layout_editor_absoluteX="141dp"></Button>
+
+    <Button
+        android:id="@+id/yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:backgroundTint="#FFEB3B"
+        android:text="yellow"
+        app:layout_constraintTop_toBottomOf="@+id/myName"
+        tools:layout_editor_absoluteX="141dp"></Button>
+
+    <Button
+        android:id="@+id/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="208dp"
+        android:backgroundTint="#000000"
+        android:text="black"
+        app:layout_constraintTop_toBottomOf="@+id/myName"
+        tools:layout_editor_absoluteX="257dp"></Button>
+</androidx.constraintlayout.widget.ConstraintLayout>
