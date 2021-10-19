@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">widgetTest</string>
+    <string name="button">방금 생성한 버튼</string>
+</resources>

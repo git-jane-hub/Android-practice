@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
     Button yellow;
     Button black;
 
+    // 데이터타입은 대문자로 작성
     Boolean click;
-    Integer num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
