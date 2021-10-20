@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -53,7 +54,71 @@ public class MainActivity extends AppCompatActivity {
                     spot.setVisibility(View.INVISIBLE);
                     trip.setVisibility(View.INVISIBLE);
                     btn.setVisibility(View.INVISIBLE);
+                    newyorkImg.setVisibility(View.INVISIBLE);
+                    taiwanImg.setVisibility(View.INVISIBLE);
+                    baliImg.setVisibility(View.INVISIBLE);
+                    bankokImg.setVisibility(View.INVISIBLE);
+                    sydneyImg.setVisibility(View.INVISIBLE);
+                    trip.clearCheck();
                 }
+            }
+        });
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("radioBtn", trip.getCheckedRadioButtonId() + "");
+                int radioId = trip.getCheckedRadioButtonId();
+                /*
+                if(radioId == 2131231020){
+                    newyorkImg.setVisibility(View.VISIBLE);
+                    taiwanImg.setVisibility(View.INVISIBLE);
+                    baliImg.setVisibility(View.INVISIBLE);
+                    bankokImg.setVisibility(View.INVISIBLE);
+                    sydneyImg.setVisibility(View.INVISIBLE);
+                }else if(radioId == 2131231139){
+                    newyorkImg.setVisibility(View.INVISIBLE);
+                    taiwanImg.setVisibility(View.VISIBLE);
+                    baliImg.setVisibility(View.INVISIBLE);
+                    bankokImg.setVisibility(View.INVISIBLE);
+                    sydneyImg.setVisibility(View.INVISIBLE);
+                }else if(radioId == 2131230807){
+                    newyorkImg.setVisibility(View.INVISIBLE);
+                    taiwanImg.setVisibility(View.INVISIBLE);
+                    baliImg.setVisibility(View.VISIBLE);
+                    bankokImg.setVisibility(View.INVISIBLE);
+                    sydneyImg.setVisibility(View.INVISIBLE);
+                }else if(radioId == 2131230809){
+                    newyorkImg.setVisibility(View.INVISIBLE);
+                    taiwanImg.setVisibility(View.INVISIBLE);
+                    baliImg.setVisibility(View.INVISIBLE);
+                    bankokImg.setVisibility(View.VISIBLE);
+                    sydneyImg.setVisibility(View.INVISIBLE);
+                }else if(radioId == 2131231123){
+                    newyorkImg.setVisibility(View.INVISIBLE);
+                    taiwanImg.setVisibility(View.INVISIBLE);
+                    baliImg.setVisibility(View.INVISIBLE);
+                    bankokImg.setVisibility(View.INVISIBLE);
+                    sydneyImg.setVisibility(View.VISIBLE);
+                }
+*/
+                newyorkImg.setVisibility(View.VISIBLE);
+                taiwanImg.setVisibility(View.VISIBLE);
+                baliImg.setVisibility(View.VISIBLE);
+                bankokImg.setVisibility(View.VISIBLE);
+                sydneyImg.setVisibility(View.VISIBLE);
+                if(radioId == 2131231020){
+                    newyorkImg.bringToFront();
+                }else if(radioId == 2131231139){
+                    taiwanImg.bringToFront();
+                }else if(radioId == 2131230807){
+                    baliImg.bringToFront();
+                }else if(radioId == 2131230809){
+                    bankokImg.bringToFront();
+                }else if(radioId == 2131231123){
+                    sydneyImg.bringToFront();
+                }
+
             }
         });
     }
