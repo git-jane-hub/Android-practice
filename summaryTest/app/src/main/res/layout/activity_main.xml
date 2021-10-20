@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="367dp"
+        android:text="어디로 갈까"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <CheckBox
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="12dp"
+        android:text="체크해서 확인"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/spot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="8dp"
+        android:text="가고싶은 여행지"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/check"
+        app:layout_constraintTop_toBottomOf="@+id/check"></TextView>
+
+    <RadioGroup
+        android:id="@+id/trip"
+        android:layout_width="102dp"
+        android:layout_height="242dp"
+        android:layout_marginTop="24dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spot">
+
+        <RadioButton
+            android:id="@+id/newyork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NewYork" />
+
+        <RadioButton
+            android:id="@+id/taiwan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taiwan" />
+
+        <RadioButton
+            android:id="@+id/bali"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bali" />
+
+        <RadioButton
+            android:id="@+id/bankok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bankok" />
+
+        <RadioButton
+            android:id="@+id/sydney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sydney" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="23dp"
+        android:text="선택하기"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/newyorkImg"
+        app:layout_constraintStart_toStartOf="@+id/trip"
+        app:layout_constraintTop_toBottomOf="@+id/textView"></Button>
+
+    <ImageView
+        android:id="@+id/baliImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:src="@drawable/bali"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/newyorkImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/newyorkImg"></ImageView>
+
+    <ImageView
+        android:id="@+id/newyorkImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:src="@drawable/newyork"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/bankokImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn"></ImageView>
+
+    <ImageView
+        android:id="@+id/taiwanImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:src="@drawable/taiwan"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/baliImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/baliImg"></ImageView>
+
+    <ImageView
+        android:id="@+id/bankokImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:src="@drawable/bankok"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/sydneyImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newyorkImg"></ImageView>
+
+    <ImageView
+        android:id="@+id/sydneyImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/sydney"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bankokImg"></ImageView>
+</androidx.constraintlayout.widget.ConstraintLayout>

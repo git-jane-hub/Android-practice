@@ -37,8 +37,9 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("Button", Result);
 
                 Toast.makeText(getApplicationContext(), "입력한값: " + Result, Toast.LENGTH_SHORT).show();
-
+                // TextView에 Result변수에 담긴 값을 추가
                 tv1.setText(Html.fromHtml("입력한 값<br>: " + Result));
+                tv1.setTextSize(30);
             }
         });
 
