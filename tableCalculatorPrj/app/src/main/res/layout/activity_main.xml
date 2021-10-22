@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableRow>
+        <EditText
+            android:id="@+id/num1"
+            android:hint="숫자"
+            android:layout_span="5"/>
+    </TableRow>
+    <TableRow>
+        <EditText
+            android:id="@+id/num2"
+            android:hint="숫자"
+            android:layout_span="5"/>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/zero"
+            android:text="0"></Button>
+        <Button
+            android:id="@+id/one"
+            android:text="1"></Button>
+        <Button
+            android:id="@+id/two"
+            android:text="2"></Button>
+        <Button
+            android:id="@+id/three"
+            android:text="3"></Button>
+        <Button
+            android:id="@+id/four"
+            android:text="4"></Button>
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/five"
+            android:text="5"></Button>
+
+        <Button
+            android:id="@+id/six"
+            android:text="6"></Button>
+
+        <Button
+            android:id="@+id/seven"
+            android:text="7"></Button>
+
+        <Button
+            android:id="@+id/eight"
+            android:text="8"></Button>
+
+        <Button
+            android:id="@+id/nine"
+            android:text="9"></Button>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/plus"
+            android:layout_span="5"
+            android:text="+"></Button>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/minus"
+            android:layout_span="5"
+            android:text="-"></Button>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/multi"
+            android:layout_span="5"
+            android:text="*"></Button>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/divi"
+            android:layout_span="5"
+            android:text="/"></Button>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="계산결과: "
+            android:textSize="25dp"></TextView>
+        <TextView
+            android:id="@+id/result"
+            android:textSize="25dp"></TextView>
+
+    </TableRow>
+</TableLayout>

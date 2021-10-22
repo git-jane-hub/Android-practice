@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+<!--
    <Button
        android:layout_width="200dp"
        android:layout_height="200dp"
@@ -13,7 +13,7 @@
        android:layout_centerHorizontal="true"
        android:layout_centerVertical="true"
        ></Button>
-   <!-- alignTop: 기준버튼 크기의 가장 높은 라인 -->
+   <!- alignTop: 기준버튼 크기의 가장 높은 라인
    <Button
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
@@ -32,4 +32,29 @@
        android:layout_alignBottom="@+id/basebtn"
        android:layout_toRightOf="@+id/basebtn"
        android:text="bottom, right"></Button>
+   -->
+   <Button
+      android:id="@+id/baseBtn1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:text="기준1"></Button>
+   <Button
+       android:id="@+id/baseBtn2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentRight="true"
+       android:layout_centerVertical="true"
+       android:text="기준2"></Button>
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+      android:layout_above="@+id/baseBtn2"
+      android:text="result1"></Button>
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_toLeftOf="@+id/baseBtn2"
+       android:layout_below="@+id/baseBtn1"
+      android:text="result2"></Button>
 </RelativeLayout>
