@@ -13,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
     Chronometer cm;
     Button start, stop, reset;
 
+    boolean running;
+    long pause;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,13 +29,23 @@ public class MainActivity extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cm.start();
+                if(!running){
+                    cm.setBase(SystemClock.elapsedRealtime() - pause);
+                    cm.start();
+                    running = true;
+                }
+
             }
         });
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cm.stop();
+                if(running){
+                    cm.stop();
+                    pause = SystemClock.elapsedRealtime() - cm.getBase();
+                    running = false;
+                }
+
             }
         });
         reset.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 cm.setBase(SystemClock.elapsedRealtime());
                 cm.stop();
+                pause = 0;
             }
         });
     }
