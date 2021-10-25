@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Button[] numBtns = new Button[10];
     // 숫자 버튼은 배열로 저장
     Integer[] numBtnIds = {R.id.zero, R.id.one, R.id.two, R.id.three, R.id.four, R.id.five, R.id.six, R.id.seven, R.id.eight, R.id.nine};
-    Button plus, minus, multi, divi;
+    Button plus, minus, multi, divi, clear;
     TextView result;
 
     @Override
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         minus = (Button)findViewById(R.id.minus);
         multi = (Button)findViewById(R.id.multi);
         divi = (Button)findViewById(R.id.divi);
+        clear = (Button)findViewById(R.id.clear);
 
         result = (TextView)findViewById(R.id.result);
 
@@ -50,11 +51,21 @@ public class MainActivity extends AppCompatActivity {
                     //Log.d("Btn", numBtns[index].getText() + "");
                     // num1이 클릭된 상태
                     if(num1.isFocused()){
-                        num1.setText(numBtns[index].getText());
+                        Log.d("zero", num1.getText() + "");
+                        // 0을 첫글자로 입력하는 것을 방지
+                        if((num1.getText() + "").equals("0")){
+                            num1.setText(numBtns[index].getText());
+                        }else{
+                            num1.setText(num1.getText() + "" + numBtns[index].getText());
+                        }
                     }
                     // num2가 클릭된 상태
                     else if(num2.isFocused()){
-                        num2.setText(numBtns[index].getText());
+                        if((num2.getText() + "").equals("0")){
+                            num2.setText(numBtns[index].getText());
+                        }else{
+                            num2.setText(num2.getText() + "" + numBtns[index].getText());
+                        }
                     }
                 }
             });
@@ -93,6 +104,14 @@ public class MainActivity extends AppCompatActivity {
                 double resultNum2 = Integer.parseInt(num2.getText() + "");
                 double resultValue = resultNum1 / resultNum2;
                 result.setText(resultValue + "");
+            }
+        });
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                num1.setText("");
+                num2.setText("");
+                result.setText("");
             }
         });
     }

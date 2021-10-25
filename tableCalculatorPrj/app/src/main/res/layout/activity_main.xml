@@ -81,6 +81,12 @@
             android:text="/"></Button>
     </TableRow>
     <TableRow>
+        <Button
+            android:id="@+id/clear"
+            android:layout_span="5"
+            android:text="C"></Button>
+    </TableRow>
+    <TableRow>
         <TextView
             android:text="계산결과: "
             android:textSize="25dp"></TextView>
