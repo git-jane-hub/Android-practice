@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/newyork"
+        android:title="travel:newyork"></item>
+    <item
+        android:id="@+id/bankok"
+        android:title="travel:bankok"></item>
+    <item
+        android:id="@+id/sydney"
+        android:title="travel:sydney"></item>
+</menu>
