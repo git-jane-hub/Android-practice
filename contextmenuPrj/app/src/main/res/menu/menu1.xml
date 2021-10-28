@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/backRed"
+        android:title="배경을 빨간색으로 변경"></item>
+    <item
+        android:id="@+id/backBlue"
+        android:title="배경을 파란색으로 변경"></item>
+    <item
+        android:id="@+id/backYellow"
+        android:title="배경을 노란색으로 변경"></item>
+    <item
+        android:id="@+id/backGreen"
+        android:title="배경을 초록색으로 변경"></item>
+</menu>
