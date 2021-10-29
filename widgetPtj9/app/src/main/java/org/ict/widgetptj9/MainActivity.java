@@ -10,7 +10,7 @@ import android.widget.ViewFlipper;
 public class MainActivity extends AppCompatActivity {
 
     Button prev, next;
-
+    ViewFlipper vf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main4);
 
         // ViewFlipper는 final로 선언해야함
-        final ViewFlipper vf;
+        //final ViewFlipper vf;
 
         prev = (Button)findViewById(R.id.prev);
         next = (Button)findViewById(R.id.next);

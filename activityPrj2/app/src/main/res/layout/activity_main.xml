@@ -8,6 +8,12 @@
     android:gravity="center"
     android:background="@color/black">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="activity_main.xml"
+        android:textColor="@color/white" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

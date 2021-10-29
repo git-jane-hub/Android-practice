@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 public class MainActivity extends AppCompatActivity {
 
     LinearLayout layout;
-    Button backBtn, statusBtn;
+    Button backBtn;//, statusBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
         layout = (LinearLayout) findViewById(R.id.layout);
         backBtn = (Button) findViewById(R.id.backBtn);
-        statusBtn = (Button) findViewById(R.id.statusBtn);
+        //statusBtn = (Button) findViewById(R.id.statusBtn);
         // 버튼을 클릭하면 contextmenu가 열리도록 연결
         registerForContextMenu(backBtn);
-        registerForContextMenu(statusBtn);
+        //registerForContextMenu(statusBtn);
 
     }
 
@@ -45,9 +45,11 @@ public class MainActivity extends AppCompatActivity {
             // backBtn에는 menu1.xml을 연결
             menuInflater.inflate(R.menu.menu1, menu);
         }
+        /*
         if (v == statusBtn) {
             menuInflater.inflate(R.menu.menu2, menu);
         }
+        */
 
 
     }
@@ -64,7 +66,9 @@ public class MainActivity extends AppCompatActivity {
             layout.setBackgroundColor(Color.YELLOW);
         }else if(item.getItemId() == R.id.backGreen){
             layout.setBackgroundColor(Color.GREEN);
-        }else if(item.getItemId() == R.id.rotate){
+        }
+        /*
+        else if(item.getItemId() == R.id.rotate){
             layout.setBackgroundColor(Color.WHITE);
             rotate += 45;
             statusBtn.setRotation(rotate);
@@ -78,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 statusBtn.setScaleY(1);
             }
         }
+         */
         return super.onContextItemSelected(item);
     }
 
