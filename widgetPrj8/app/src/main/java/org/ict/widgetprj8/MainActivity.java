@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         acv = (AutoCompleteTextView)findViewById(R.id.acv);
-        macv = (MultiAutoCompleteTextView)findViewById(R.id.macv);
+       // macv = (MultiAutoCompleteTextView)findViewById(R.id.macv);
 
         // 검색창에 띄울 아이템 나열
-        String [] items = {"아메리카노", "큐브라떼", "모히또", "카모마일", "레몬티"};
+        String [] items = {"android", "ios", "andrew", "rock and roll", "anniversary", "angel", "anxious", "ioniq", "iot", "ioi"};
 
         // 부품과 데이터를 연결하기 위해 어댑터라는 개념을 사용
         // 파라미터 this와 simple_dropdown_item_1line은 고정, items를 넣어야하는 데이터에 맞춰 작성

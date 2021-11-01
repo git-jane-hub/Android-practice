@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
         submitBtn = (Button)findViewById(R.id.submitBtn);
 
 
-        String str = "android";
+        String str = "abcdefg";
         List<String> strs = new ArrayList<>();
-        strs.add("android");
-        strs.add("ios");
-        strs.add("and");
-        strs.add("roid");
+        strs.add(str);
+        strs.add("qwerqwer");
+        strs.add("asdfasdf");
+        strs.add("zxcvzxvc");
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
