@@ -7,10 +7,9 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/lv" />
-
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView" />
 
 </LinearLayout>

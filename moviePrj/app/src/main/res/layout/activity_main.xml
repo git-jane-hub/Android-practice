@@ -2,15 +2,14 @@
 <LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical">
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/lv" />
-
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
